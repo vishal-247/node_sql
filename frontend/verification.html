@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="verification-page">
+
+<header>
+    <div class="logo1">Document Verification Form</div>
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+</header>
+
+<section class="verification">
+    <h1>Document Verification</h1>
+    <p>Please fill out the form below to verify your document.</p>
+
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <!-- Name Input -->
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your mail" required>
+
+        <!-- Document Type Dropdown -->
+        <label for="docType">Document Type:</label>
+        <select id="docType" name="docType" required>
+            <option value="" disabled selected>Select your document type</option>
+            <option value="passport">Passport</option>
+            <option value="license">Driver's License</option>
+            <option value="idCard">ID Card</option>
+            <option value="certificate">Birth Certificate</option>
+            <option value="other">Other</option>
+        </select>
+
+        <!-- File Upload -->
+        <label for="pdfUpload">Upload PDF:</label>
+        <input type="file" id="pdfUpload" name="pdfUpload" accept=".pdf" placeholder="Choose your PDF" required>
+
+        <!-- Submit Button -->
+         <a href="/submit"><button type="submit" >Submit</button></a>
+        
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
